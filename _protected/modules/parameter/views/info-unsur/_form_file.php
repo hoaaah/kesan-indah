@@ -81,6 +81,10 @@ $("#submitButton").on("click", function(e){
         contentType: false,
         processData: false,
         cache: false,
+        beforeSend: function(data)
+        {
+            $("#submitButton").attr("disabled", true);
+        },
         success:function(data) // , textStatus, jqXHR 
         {
             console.log(data)
