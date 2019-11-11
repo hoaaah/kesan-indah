@@ -30,7 +30,7 @@ $this->params['breadcrumbs'][] = $this->title;
         'responsiveWrap' => false,        
         'toolbar' => [
             [
-                'content' => '{export}{toggleData}',
+                // 'content' => '{export}{toggleData}',
             ],
         ],       
         'pager' => [

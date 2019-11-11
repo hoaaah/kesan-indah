@@ -8,6 +8,7 @@ use yii\bootstrap4\Modal;
 use yii\helpers\Html;
 use yii\widgets\DetailView;
 use  bizley\quill\assets\QuillAsset;
+use yii\helpers\StringHelper;
 
 //  GrowlAsset will register to this view, so it will not load every ajax given.
 GrowlAsset::register($this);
@@ -116,7 +117,7 @@ $this->params['breadcrumbs'][] = "{$this->title} Lv. ".Yii::$app->request->get('
                     <?php foreach ($bestPracticeFile as $key => $data): ?>
                     <tr>
                         <td>
-                            <?= Html::a('<i class="fas fa-file-pdf"></i> '.$data->name, ['preview', 'file' => $data->file], [    
+                            <?= Html::a('<i class="fas fa-file-pdf"></i> '.$data->uraian, ['preview', 'file' => $data->file], [    
                                 'role'=>'modal-remote',
                                 'title'=> "Tambah Best Practice",
                             ]) ?>
@@ -144,7 +145,10 @@ $this->params['breadcrumbs'][] = "{$this->title} Lv. ".Yii::$app->request->get('
                     <?php foreach ($keterkaitanFile as $key => $data): ?>
                     <tr>
                         <td>
-                            <?= "{$data->kd_unsur_lwn}.{$data->kd_sub_unsur_lwn}.{$data->level_lwn} {$data->uraian}" ?>
+                            <?= Html::a(StringHelper::truncateWords("{$data->kd_unsur_lwn}.{$data->kd_sub_unsur_lwn}.{$data->level_lwn} {$data->uraian}", 5, '...'), ['terkait', 'id' => $data->id], [    
+                                'role'=>'modal-remote',
+                                'title'=> "Tambah Best Practice",
+                            ]) ?>
                         </td>
                     </tr>
                     <?php endforeach; ?>
@@ -168,7 +172,10 @@ $this->params['breadcrumbs'][] = "{$this->title} Lv. ".Yii::$app->request->get('
                     <?php foreach ($keterkaitanUnsur as $key => $data): ?>
                     <tr>
                         <td>
-                            <?= "{$data->kd_unsur_lwn}.{$data->kd_sub_unsur_lwn}.{$data->level_lwn} {$data->uraian}" ?>
+                            <?= Html::a(StringHelper::truncateWords("{$data->kd_unsur_lwn}.{$data->kd_sub_unsur_lwn}.{$data->level_lwn} {$data->uraian}", 5, '...'), ['terkait', 'id' => $data->id], [    
+                                'role'=>'modal-remote',
+                                'title'=> "Tambah Best Practice",
+                            ]) ?>
                         </td>
                     </tr>
                     <?php endforeach; ?>
