@@ -83,12 +83,12 @@ $config = [
             'identityClass' => 'app\models\UserIdentity',
             'enableAutoLogin' => true,
             'identityCookie' => [
-                'name' => '_econsolenUser', // unique for backend
+                'name' => '_kesianUser', // unique for backend
                 // 'path'=>'/backend/web'  // correct path for the backend app.
             ]                 
         ],
         'session' => [
-            'name' => '_econsoleSessionId', // unique for backend
+            'name' => '_kesianSessionId', // unique for backend
             'class' => 'yii\web\Session',
             'savePath' => '@app/runtime/session'
         ],
