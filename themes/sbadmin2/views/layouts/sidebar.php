@@ -45,7 +45,7 @@ HTML
                 ['label' => 'Item', 'icon' => 'fas fa-circle', 'url' => ['/klasifikasi/item'], 'visible' => akses(502)],
             ],
         ],
-        ['label' => 'Informasi Unsur', 'icon' => 'fas fa-eye', 'url' => ['/info-unsur'], 'visible' => 301],
+        ['label' => 'Knowledge Sharing', 'icon' => 'fas fa-eye', 'url' => ['/info-unsur'], 'visible' => 301],
         ['label' => 'Best Practice', 'icon' => 'fas fa-pen', 'url' => ['/best-practice'], 'visible' => 302],
         // ['label' => 'Penerimaan Persediaan', 'icon' => 'fa fa-edit', 'url' => '#', 'visible' => akses(404) || akses(402) || akses(403), 'items' => 
         //     [
