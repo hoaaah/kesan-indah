@@ -40,9 +40,8 @@ HTML
         ['label' => 'Parameter', 'icon' => 'fas fa-circle','url' => '#', 'visible' => akses(201) || akses(501) || akses(502),'items'  =>
             [
                 ['label' => 'Informasi Unsur', 'icon' => 'fas fa-eye', 'url' => ['/parameter/info-unsur'], 'visible' => 202],
-                ['label' => 'Unit-Divisi', 'icon' => 'fas fa-circle', 'url' => ['/parameter/unit'], 'visible' => akses(201)],
-                ['label' => 'Klasifikasi Akun', 'icon' => 'fas fa-circle', 'url' => ['/klasifikasi/akun'], 'visible' => akses(501)],
-                ['label' => 'Item', 'icon' => 'fas fa-circle', 'url' => ['/klasifikasi/item'], 'visible' => akses(502)],
+                // ['label' => 'Referensi Dokumen', 'icon' => 'fas fa-circle', 'url' => ['/parameter/unit'], 'visible' => akses(201)],
+                // ['label' => 'Unggah Best Practice', 'icon' => 'fas fa-circle', 'url' => ['/klasifikasi/akun'], 'visible' => akses(501)],
             ],
         ],
         ['label' => 'Knowledge Sharing', 'icon' => 'fas fa-eye', 'url' => ['/info-unsur'], 'visible' => 301],
