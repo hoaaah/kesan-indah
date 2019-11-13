@@ -50,7 +50,7 @@ class BestPracticeFile extends \yii\db\ActiveRecord
             [['uraian'], 'string'],
             [['name', 'file', 'filename'], 'string', 'max' => 255],
             [['ref'], 'string', 'max' => 20],
-            [['image'], 'file', 'extensions' => 'xls, xlsx, csv, pdf, jpg, jpeg, png'],
+            [['image'], 'file', 'extensions' => 'pdf', 'maxSize' => 9*1024*1024], // xls, xlsx, csv, pdf, jpg, jpeg, png
             [['file', 'filename'], 'string', 'max' => 255],
         ];
     }
