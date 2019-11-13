@@ -1,5 +1,6 @@
 <?php
 
+use bizley\quill\Quill;
 use yii\helpers\Html;
 use yii\widgets\ActiveForm;
 use dosamigos\ckeditor\CKEditor;
@@ -54,15 +55,14 @@ use kartik\widgets\Select2;
 
     <?= $form->field($model, 'title')->textInput(['placeholder' => 'Judul ...'])->label(false) ?>
 
-    <?php 
-    echo $form->field($model, 'content')->widget(CKEditor::className(), [
-            'options' => ['rows' => 6],
-            'preset' => 'full', //basic, standard, full
-            'clientOptions' => [
-                'filebrowserUploadUrl' => 'upload'
-            ]
-        ])->label(false);
-    ?>  
+    <?= $form->field($model, 'content')->widget(Quill::class, [
+        'theme' => 'snow',
+        'toolbarOptions' => 'FULL',
+        'options' => [
+            'style' => 'min-height:500px;'
+            // 'min-height' => '500px'
+        ]
+    ])->label(false) ?>
 
     <div class="form-group">
         <?= Html::submitButton($model->isNewRecord ? 'Create' : 'Update', ['class' => $model->isNewRecord ? 'btn btn-success' : 'btn btn-primary']) ?>
