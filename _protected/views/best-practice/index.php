@@ -31,7 +31,7 @@ $this->params['breadcrumbs'][] = $this->title;
         'responsiveWrap' => false,        
         'toolbar' => [
             [
-                'content' => '{export}{toggleData}',
+                'content' => '{export}', // {toggleData}
             ],
         ],       
         'pager' => [
@@ -79,7 +79,7 @@ $this->params['breadcrumbs'][] = $this->title;
                     $listTemplate = "<li>{content}</li>";
                     $listedTemplate = "";
                     foreach ($files as $key => $data) {
-                        $content = Html::a('<i class="fas fa-file-pdf"></i> '.$data->name, ['preview', 'file' => $data->file], [    
+                        $content = Html::a('<i class="fas fa-file-pdf"></i> '.$data->uraian, ['preview', 'file' => $data->file], [    
                             'class' => 'text-white',
                             'role'=>'modal-remote',
                             'title'=> "Tambah Best Practice",
@@ -104,7 +104,7 @@ $this->params['breadcrumbs'][] = $this->title;
                     $listTemplate = "<li>{content}</li>";
                     $listedTemplate = "";
                     foreach ($files as $key => $data) {
-                        $content = Html::a('<i class="fas fa-file-pdf"></i> '.$data->name, ['preview', 'file' => $data->file], [    
+                        $content = Html::a('<i class="fas fa-file-pdf"></i> '.$data->uraian, ['preview', 'file' => $data->file], [    
                             'class' => 'text-white',
                             'role'=>'modal-remote',
                             'title'=> "Tambah Best Practice",
@@ -129,7 +129,7 @@ $this->params['breadcrumbs'][] = $this->title;
                     $listTemplate = "<li>{content}</li>";
                     $listedTemplate = "";
                     foreach ($files as $key => $data) {
-                        $content = Html::a('<i class="fas fa-file-pdf"></i> '.$data->name, ['preview', 'file' => $data->file], [    
+                        $content = Html::a('<i class="fas fa-file-pdf"></i> '.$data->uraian, ['preview', 'file' => $data->file], [    
                             'class' => 'text-white',
                             'role'=>'modal-remote',
                             'title'=> "Tambah Best Practice",
@@ -154,7 +154,7 @@ $this->params['breadcrumbs'][] = $this->title;
                     $listTemplate = "<li>{content}</li>";
                     $listedTemplate = "";
                     foreach ($files as $key => $data) {
-                        $content = Html::a('<i class="fas fa-file-pdf"></i> '.$data->name, ['preview', 'file' => $data->file], [    
+                        $content = Html::a('<i class="fas fa-file-pdf"></i> '.$data->uraian, ['preview', 'file' => $data->file], [    
                             'class' => 'text-white',
                             'role'=>'modal-remote',
                             'title'=> "Tambah Best Practice",
@@ -179,7 +179,7 @@ $this->params['breadcrumbs'][] = $this->title;
                     $listTemplate = "<li>{content}</li>";
                     $listedTemplate = "";
                     foreach ($files as $key => $data) {
-                        $content = Html::a('<i class="fas fa-file-pdf"></i> '.$data->name, ['preview', 'file' => $data->file], [    
+                        $content = Html::a('<i class="fas fa-file-pdf"></i> '.$data->uraian, ['preview', 'file' => $data->file], [    
                             'class' => 'text-white',
                             'role'=>'modal-remote',
                             'title'=> "Tambah Best Practice",

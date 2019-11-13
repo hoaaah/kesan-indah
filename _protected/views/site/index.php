@@ -9,23 +9,6 @@ use yii\bootstrap\Modal;
 
 $this->title = Yii::t('app', Yii::$app->name);
 
-function angka($n) {
-    // first strip any formatting;
-    $n = (0+str_replace(",","",$n));
-    
-    // is this a number?
-    if(!is_numeric($n)) return false;
-    
-    // now filter it;
-    if($n>1000000000000) return round(($n/1000000000000),1);
-    else if($n>1000000000) return round(($n/1000000000),1);
-    else if($n>1000000) return round(($n/1000000),1);
-    else if($n>1000) return round(($n/1000),1);
-    
-    return number_format($n);
-}
-
-$kabkotJsUrl = \yii\helpers\Url::to(['/images/id-kabkot.js'], true);
 ?>
 <script src="https://code.highcharts.com/maps/highmaps.js"></script>
 <script src="https://code.highcharts.com/maps/modules/exporting.js"></script>

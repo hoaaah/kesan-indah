@@ -361,45 +361,17 @@ class InfoUnsurController extends Controller
         Yii::$app->response->sendFile($returnedFile, $model->filename);
     }
 
-    /**
-     * Creates a new RefSubUnsur model.
-     * If creation is successful, the browser will be redirected to the 'view' page.
-     * @return mixed
-     */
-    public function actionCreate()
+    public function actionTerkait($id)
     {
-        $request = Yii::$app->request;
-        $render = 'render';
-
-        if($request->isAjax){
-            Yii::$app->response->format = Response::FORMAT_JSON;
-            $render = 'renderAjax';
-        }
-
-        $model = new RefSubUnsur();
-
-        $return = $this->{$render}('_form', [
-            'model' => $model,
-        ]);
-
-        if ($model->load(Yii::$app->request->post())) {
-            IF($model->save()){
-                return 1;
-            }ELSE{
-                $return = "";
-                if($model->errors) $return .= $this->setErrorMessage($model->errors);
-                return $return;
-            }
-        } else {
-            if($request->isAjax) return [
-                'title'=> "Tambah Data",
-                'content'=> $return,
-                'footer'=> Html::button('Close',['class'=>'btn btn-secondary float-left','data-dismiss'=>"modal"])
-            ];
-            return $return;
-        }
+        $keterkaitan = Keterkaitan::findOne(['id' => $id]);
+        Yii::$app->response->format = Response::FORMAT_JSON;
+        return [
+            'title'=> "",
+            'content'=> "{$keterkaitan->kd_unsur_lwn}.{$keterkaitan->kd_sub_unsur_lwn}.{$keterkaitan->level_lwn} $keterkaitan->uraian",
+            'footer'=> Html::button('Close',['class'=>'btn btn-secondary float-left','data-dismiss'=>"modal"])
+        ];
     }
-
+    
     /**
      * Updates an existing RefSubUnsur model.
      * If update is successful, the browser will be redirected to the 'view' page.
@@ -450,19 +422,6 @@ class InfoUnsurController extends Controller
             $return .= $data['0'].'<br>';
         }
         return $return;
-    }
-
-    /**
-     * Deletes an existing RefSubUnsur model.
-     * If deletion is successful, the browser will be redirected to the 'index' page.
-     * @param integer $id
-     * @return mixed
-     */
-    public function actionDelete($id)
-    {
-        $this->findModel($id)->delete();
-
-        return $this->redirect(Yii::$app->request->referrer);
     }
 
     /**
