@@ -36,6 +36,8 @@ use kartik\file\FileInput;
         ]
     ])->label(false) ?>
 
+    <?= $form->field($model, 'ref')->textInput()->label("No Referensi Dokumen (Suplemen 1)") ?>
+
     <?= $form->field($model, 'uraian')->textInput() ?>
 
     <div class="form-group">
