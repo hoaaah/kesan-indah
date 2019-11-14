@@ -133,6 +133,8 @@ class InfoUnsurController extends Controller
         $keterkaitanFile = Keterkaitan::findAll(['kd_unsur' => $model->kd_unsur, 'kd_sub_unsur' => $model->kd_sub_unsur, 'level' => $lv, 'kategori' => 1]);
         $keterkaitanUnsur = Keterkaitan::findAll(['kd_unsur' => $model->kd_unsur, 'kd_sub_unsur' => $model->kd_sub_unsur, 'level' => $lv, 'kategori' => 2]);
 
+        $subUnsurList = RefSubUnsur::find()->all();
+
         $return = $this->{$render}('view', [
             'model' => $model,
             'parameters' => $parameters,
@@ -141,6 +143,7 @@ class InfoUnsurController extends Controller
             'bestPracticeFile' => $bestPracticeFile,
             'keterkaitanFile' => $keterkaitanFile,
             'keterkaitanUnsur' => $keterkaitanUnsur,
+            'subUnsurList' => $subUnsurList
         ]);
         
         if($request->isAjax) return [

@@ -99,7 +99,7 @@ $this->params['breadcrumbs'][] = "{$this->title} Lv. ".Yii::$app->request->get('
                 ]
             ]) ?>
         </div>
-        <div class="col-md-4">
+        <div class="col-md-3">
             <table class="table table-striped table-bordered detail-view">
                 <tbody>
                     <tr>
@@ -182,8 +182,25 @@ $this->params['breadcrumbs'][] = "{$this->title} Lv. ".Yii::$app->request->get('
                 </tbody>
             </table>
         </div>
+        <div class="col-md-1">
+            <div class="btn-group-vertical" role="group" aria-label="Button group with nested dropdown">
+                <?php foreach($subUnsurList as $subUnsur): ?>
+                    <div class="btn-group" role="group">
+                        <button id="btnGroupDrop1" type="button" class="btn btn-secondary dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            <?= "{$subUnsur->kd_unsur}.{$subUnsur->kd_sub_unsur}" ?>
+                        </button>
+                        <div class="dropdown-menu" aria-labelledby="btnGroupDrop1">
+                            <?=  Html::a("L1", ['level', 'lv' => 1, 'id' => $subUnsur->id], ['class' => 'dropdown-item']) ?>
+                            <?=  Html::a("L2", ['level', 'lv' => 2, 'id' => $subUnsur->id], ['class' => 'dropdown-item']) ?>
+                            <?=  Html::a("L3", ['level', 'lv' => 3, 'id' => $subUnsur->id], ['class' => 'dropdown-item']) ?>
+                            <?=  Html::a("L4", ['level', 'lv' => 4, 'id' => $subUnsur->id], ['class' => 'dropdown-item']) ?>
+                            <?=  Html::a("L5", ['level', 'lv' => 5, 'id' => $subUnsur->id], ['class' => 'dropdown-item']) ?>
+                        </div>
+                    </div>
+                <?php endforeach; ?>
+            </div>
+        </div>        
     </div>
-
 </div>
 
 <?php Modal::begin([
