@@ -45,7 +45,7 @@ HTML
             ],
         ],
         ['label' => 'Knowledge Sharing', 'icon' => 'fas fa-eye', 'url' => ['/info-unsur'], 'visible' => 301],
-        ['label' => 'Best Practice', 'icon' => 'fas fa-pen', 'url' => ['/best-practice'], 'visible' => 302],
+        ['label' => 'Best Practice', 'icon' => 'fas fa-file-download', 'url' => ['/best-practice'], 'visible' => 302],
         // ['label' => 'Penerimaan Persediaan', 'icon' => 'fa fa-edit', 'url' => '#', 'visible' => akses(404) || akses(402) || akses(403), 'items' => 
         //     [
         //         ['label' => 'Saldo Awal', 'icon' => 'fas fa-circle', 'url' => ['/usage/saldoawal'], 'visible' => akses(404)],
@@ -67,5 +67,12 @@ HTML
         //         ['label' => 'Laporan', 'icon' => 'fas fa-circle', 'url' => ['/pelaporan/pelaporan'], 'visible' => akses(504)],
         //     ],
         // ],
+        ['label' => 'Peraturan Terkait', 'icon' => 'fa fa-file-contract', 'url' => '#', 'visible' => !Yii::$app->user->isGuest, 'items' => 
+            [
+                ['label' => 'PP 60/2008', 'icon' => 'fas fa-file-pdf', 'url' => ['/uploads/PP_60_Tahun_2008_SPIP.pdf'], 'visible' => !Yii::$app->user->isGuest],
+                ['label' => 'Suplemen 1', 'icon' => 'fas fa-file-pdf', 'url' => ['/uploads/Perka-No-4-2016-tentang-Penilaian-Maturitas-SPIP.pdf'], 'visible' => !Yii::$app->user->isGuest],
+                ['label' => 'Suplemen 2', 'icon' => 'fas fa-file-pdf', 'url' => ['/uploads/SE-01-D3-2019-tentang-penjelasan-teknis-pengujian-substansi-spip.pdf'], 'visible' => !Yii::$app->user->isGuest],
+            ],
+        ],
     ]
 ]);
