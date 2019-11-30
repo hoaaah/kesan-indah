@@ -1,13 +1,13 @@
 <?php
 
 use app\widgets\Card;
-use johnitvn\ajaxcrud\CrudAsset;
+use hoaaah\ajaxcrud\CrudAsset;
 use kartik\detail\DetailView as KartikDetailView;
 use kartik\growl\GrowlAsset;
 use yii\bootstrap4\Modal;
 use yii\helpers\Html;
 use yii\widgets\DetailView;
-use  bizley\quill\assets\QuillAsset;
+use bizley\quill\assets\QuillAsset;
 use yii\helpers\StringHelper;
 
 //  GrowlAsset will register to this view, so it will not load every ajax given.

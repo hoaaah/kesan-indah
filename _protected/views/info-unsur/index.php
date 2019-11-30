@@ -4,8 +4,8 @@ use yii\helpers\Html;
 use kartik\grid\GridView;
 use yii\bootstrap4\Modal;
 use kartik\growl\GrowlAsset;
-use johnitvn\ajaxcrud\CrudAsset; 
-use johnitvn\ajaxcrud\BulkButtonWidget;
+use hoaaah\ajaxcrud\CrudAsset; 
+use hoaaah\ajaxcrud\BulkButtonWidget;
 
 //  GrowlAsset will register to this view, so it will not load every ajax given.
 GrowlAsset::register($this);

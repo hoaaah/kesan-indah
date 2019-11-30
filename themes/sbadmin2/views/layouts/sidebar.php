@@ -5,12 +5,11 @@ use yii\helpers\Html;
 use yii\helpers\Url;
 
 function akses($menu){
-    $akses = \app\models\RefUserMenu::find()->where(['kd_user' => Yii::$app->user->identity->kd_user, 'menu' => $menu])->one();
-    IF($akses){
+    $akses = \app\models\RefUserMenu::find()->where(['kd_user' => Yii::$app->user->identity->kd_user ?? 0, 'menu' => $menu])->one();
+    if($akses){
         return true;
-    }else{
-        return false;
     }
+    return false;
 }
 $appName = Yii::$app->name;
 $logoImage = Html::img(Url::to('@web/images/logo.png', false), ['height' => '30px']);
@@ -67,11 +66,11 @@ HTML
         //         ['label' => 'Laporan', 'icon' => 'fas fa-circle', 'url' => ['/pelaporan/pelaporan'], 'visible' => akses(504)],
         //     ],
         // ],
-        ['label' => 'Peraturan Terkait', 'icon' => 'fa fa-file-contract', 'url' => '#', 'visible' => !Yii::$app->user->isGuest, 'items' => 
+        ['label' => 'Peraturan Terkait', 'icon' => 'fa fa-file-contract', 'url' => '#', 'visible' => true, 'items' => 
             [
-                ['label' => 'PP 60/2008', 'icon' => 'fas fa-file-pdf', 'url' => ['/uploads/PP_60_Tahun_2008_SPIP.pdf'], 'visible' => !Yii::$app->user->isGuest],
-                ['label' => 'Suplemen 1', 'icon' => 'fas fa-file-pdf', 'url' => ['/uploads/Perka-No-4-2016-tentang-Penilaian-Maturitas-SPIP.pdf'], 'visible' => !Yii::$app->user->isGuest],
-                ['label' => 'Suplemen 2', 'icon' => 'fas fa-file-pdf', 'url' => ['/uploads/SE-01-D3-2019-tentang-penjelasan-teknis-pengujian-substansi-spip.pdf'], 'visible' => !Yii::$app->user->isGuest],
+                ['label' => 'PP 60/2008', 'icon' => 'fas fa-file-pdf', 'url' => ['/uploads/PP_60_Tahun_2008_SPIP.pdf'], 'visible' => true],
+                ['label' => 'Suplemen 1', 'icon' => 'fas fa-file-pdf', 'url' => ['/uploads/Perka-No-4-2016-tentang-Penilaian-Maturitas-SPIP.pdf'], 'visible' => true],
+                ['label' => 'Suplemen 2', 'icon' => 'fas fa-file-pdf', 'url' => ['/uploads/SE-01-D3-2019-tentang-penjelasan-teknis-pengujian-substansi-spip.pdf'], 'visible' => true],
             ],
         ],
     ]

@@ -5,8 +5,8 @@ use yii\helpers\Html;
 use kartik\grid\GridView;
 use yii\bootstrap4\Modal;
 use kartik\growl\GrowlAsset;
-use johnitvn\ajaxcrud\CrudAsset; 
-use johnitvn\ajaxcrud\BulkButtonWidget;
+use hoaaah\ajaxcrud\CrudAsset; 
+use hoaaah\ajaxcrud\BulkButtonWidget;
 
 //  GrowlAsset will register to this view, so it will not load every ajax given.
 GrowlAsset::register($this);
@@ -79,11 +79,16 @@ $this->params['breadcrumbs'][] = $this->title;
                     $listTemplate = "<li>{content}</li>";
                     $listedTemplate = "";
                     foreach ($files as $key => $data) {
-                        $content = Html::a('<i class="fas fa-file-pdf"></i> '.$data->uraian, ['preview', 'file' => $data->file], [    
-                            'class' => 'text-white',
-                            'role'=>'modal-remote',
-                            'title'=> "Tambah Best Practice",
-                        ]);
+                        if(!Yii::$app->user->isGuest)
+                        {
+                            $content = Html::a('<i class="fas fa-file-pdf"></i> '.$data->uraian, ['preview', 'file' => $data->file], [    
+                                'class' => 'text-white',
+                                'role'=>'modal-remote',
+                                'title'=> "Tambah Best Practice",
+                            ]);
+                        }else{
+                            $content = $data->uraian;
+                        }
                         $listedTemplate .= strtr($listTemplate, ['{content}' => $content]);
                     }
                     return strtr($template, ["{list}" => $listedTemplate]);
@@ -104,11 +109,16 @@ $this->params['breadcrumbs'][] = $this->title;
                     $listTemplate = "<li>{content}</li>";
                     $listedTemplate = "";
                     foreach ($files as $key => $data) {
-                        $content = Html::a('<i class="fas fa-file-pdf"></i> '.$data->uraian, ['preview', 'file' => $data->file], [    
-                            'class' => 'text-white',
-                            'role'=>'modal-remote',
-                            'title'=> "Tambah Best Practice",
-                        ]);
+                        if(!Yii::$app->user->isGuest)
+                        {
+                            $content = Html::a('<i class="fas fa-file-pdf"></i> '.$data->uraian, ['preview', 'file' => $data->file], [    
+                                'class' => 'text-white',
+                                'role'=>'modal-remote',
+                                'title'=> "Tambah Best Practice",
+                            ]);
+                        }else{
+                            $content = $data->uraian;
+                        }
                         $listedTemplate .= strtr($listTemplate, ['{content}' => $content]);
                     }
                     return strtr($template, ["{list}" => $listedTemplate]);
@@ -129,11 +139,16 @@ $this->params['breadcrumbs'][] = $this->title;
                     $listTemplate = "<li>{content}</li>";
                     $listedTemplate = "";
                     foreach ($files as $key => $data) {
-                        $content = Html::a('<i class="fas fa-file-pdf"></i> '.$data->uraian, ['preview', 'file' => $data->file], [    
-                            'class' => 'text-white',
-                            'role'=>'modal-remote',
-                            'title'=> "Tambah Best Practice",
-                        ]);
+                        if(!Yii::$app->user->isGuest)
+                        {
+                            $content = Html::a('<i class="fas fa-file-pdf"></i> '.$data->uraian, ['preview', 'file' => $data->file], [    
+                                'class' => 'text-white',
+                                'role'=>'modal-remote',
+                                'title'=> "Tambah Best Practice",
+                            ]);
+                        }else{
+                            $content = $data->uraian;
+                        }
                         $listedTemplate .= strtr($listTemplate, ['{content}' => $content]);
                     }
                     return strtr($template, ["{list}" => $listedTemplate]);
@@ -154,11 +169,16 @@ $this->params['breadcrumbs'][] = $this->title;
                     $listTemplate = "<li>{content}</li>";
                     $listedTemplate = "";
                     foreach ($files as $key => $data) {
-                        $content = Html::a('<i class="fas fa-file-pdf"></i> '.$data->uraian, ['preview', 'file' => $data->file], [    
-                            'class' => 'text-white',
-                            'role'=>'modal-remote',
-                            'title'=> "Tambah Best Practice",
-                        ]);
+                        if(!Yii::$app->user->isGuest)
+                        {
+                            $content = Html::a('<i class="fas fa-file-pdf"></i> '.$data->uraian, ['preview', 'file' => $data->file], [    
+                                'class' => 'text-white',
+                                'role'=>'modal-remote',
+                                'title'=> "Tambah Best Practice",
+                            ]);
+                        }else{
+                            $content = $data->uraian;
+                        }
                         $listedTemplate .= strtr($listTemplate, ['{content}' => $content]);
                     }
                     return strtr($template, ["{list}" => $listedTemplate]);
@@ -179,11 +199,16 @@ $this->params['breadcrumbs'][] = $this->title;
                     $listTemplate = "<li>{content}</li>";
                     $listedTemplate = "";
                     foreach ($files as $key => $data) {
-                        $content = Html::a('<i class="fas fa-file-pdf"></i> '.$data->uraian, ['preview', 'file' => $data->file], [    
-                            'class' => 'text-white',
-                            'role'=>'modal-remote',
-                            'title'=> "Tambah Best Practice",
-                        ]);
+                        if(!Yii::$app->user->isGuest)
+                        {
+                            $content = Html::a('<i class="fas fa-file-pdf"></i> '.$data->uraian, ['preview', 'file' => $data->file], [    
+                                'class' => 'text-white',
+                                'role'=>'modal-remote',
+                                'title'=> "Tambah Best Practice",
+                            ]);
+                        }else{
+                            $content = $data->uraian;
+                        }
                         $listedTemplate .= strtr($listTemplate, ['{content}' => $content]);
                     }
                     return strtr($template, ["{list}" => $listedTemplate]);

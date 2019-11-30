@@ -1,7 +1,7 @@
 <?php
 
 use app\widgets\Card;
-use johnitvn\ajaxcrud\CrudAsset;
+use hoaaah\ajaxcrud\CrudAsset;
 use kartik\detail\DetailView as KartikDetailView;
 use kartik\growl\GrowlAsset;
 use yii\bootstrap4\Modal;

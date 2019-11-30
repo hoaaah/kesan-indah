@@ -1,13 +1,13 @@
 <?php
 
 use app\widgets\Card;
-use johnitvn\ajaxcrud\CrudAsset;
+use hoaaah\ajaxcrud\CrudAsset;
 use kartik\detail\DetailView as KartikDetailView;
 use kartik\growl\GrowlAsset;
 use yii\bootstrap4\Modal;
 use yii\helpers\Html;
 use yii\widgets\DetailView;
-use  bizley\quill\assets\QuillAsset;
+use bizley\quill\assets\QuillAsset;
 use yii\helpers\StringHelper;
 
 //  GrowlAsset will register to this view, so it will not load every ajax given.
@@ -86,6 +86,7 @@ $this->params['breadcrumbs'][] = "{$this->title} Lv. ".Yii::$app->request->get('
             ]) ?>
         </div>
         <div class="col-md-4">
+            <?php if(!Yii::$app->user->isGuest): ?>
             <table class="table table-striped table-bordered detail-view">
                 <tbody>
                     <tr>
@@ -103,6 +104,7 @@ $this->params['breadcrumbs'][] = "{$this->title} Lv. ".Yii::$app->request->get('
                     <?php endforeach; ?>
                 </tbody>
             </table>
+            <?php endif; ?>
             
             <table class="table table-striped table-bordered detail-view">
                 <tbody>
