@@ -155,6 +155,12 @@ $this->params['breadcrumbs'][] = "{$this->title} Lv. ".Yii::$app->request->get('
                                 'role'=>'modal-remote',
                                 'title'=> "Tambah Best Practice",
                             ]) ?>
+                            <?= Html::a('<i class="fas fa-times"></i> ', ['deletelink', 'id' => $data->id], [    
+                                'class'=> 'text-danger float-right',
+                                'title'=> "Hapus Data",
+                                'data-confirm' => "Yakin menghapus Keterkaitan?",
+                                'data-method' => 'POST',
+                            ]) ?>
                         </td>
                     </tr>
                     <?php endforeach; ?>
@@ -182,6 +188,25 @@ $this->params['breadcrumbs'][] = "{$this->title} Lv. ".Yii::$app->request->get('
                                 'role'=>'modal-remote',
                                 'title'=> "Tambah Best Practice",
                             ]) ?>
+                            <?= Html::a('<i class="fas fa-times"></i> ', ['deletelink', 'id' => $data->id], [    
+                                'class'=> 'text-danger float-right',
+                                'title'=> "Hapus Data",
+                                'data-confirm' => "Yakin menghapus Keterkaitan?",
+                                'data-method' => 'POST',
+                            ]) ?>
+                            <?php
+                            // Html::a('<i class="fas fa-check"></i> ', [
+                            //     'keterkaitan', 'id' => $data->id,
+                            //     'kategori' => $data->kategori, 
+                            //     'kd_unsur' => $model->kd_unsur,
+                            //     'kd_sub_unsur' => $model->kd_sub_unsur,
+                            //     'lv' => $lv,
+                            // ], [    
+                            //     'class'=> 'text-success float-right',
+                            //     'title'=> "Ubah Data",
+                            //     'role'=>'modal-remote',
+                            // ]);
+                             ?>
                         </td>
                     </tr>
                     <?php endforeach; ?>

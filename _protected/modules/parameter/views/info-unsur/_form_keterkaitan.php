@@ -7,6 +7,10 @@ use kartik\select2\Select2;
 /* @var $this yii\web\View */
 /* @var $model app\models\RefSubUnsur */
 /* @var $form yii\widgets\ActiveForm */
+
+if(!$model->isNewRecord){
+    $model->kd_gabungan_lwn = "{$model->kd_unsur_lwn}.{$model->kd_sub_unsur_lwn}";
+}
 ?>
 
 <div class="ref-sub-unsur-form">

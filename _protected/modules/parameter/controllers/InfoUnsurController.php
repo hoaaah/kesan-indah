@@ -436,6 +436,13 @@ class InfoUnsurController extends Controller
         return $this->redirect(Yii::$app->request->referrer);
     }
 
+    public function actionDeletelink($id)
+    {
+        $model = Keterkaitan::findOne(['id' => $id]);
+        $model->delete();
+        return $this->redirect(Yii::$app->request->referrer);
+    }
+
     /**
      * Finds the RefSubUnsur model based on its primary key value.
      * If the model is not found, a 404 HTTP exception will be thrown.
