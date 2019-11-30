@@ -121,6 +121,12 @@ $this->params['breadcrumbs'][] = "{$this->title} Lv. ".Yii::$app->request->get('
                                 'role'=>'modal-remote',
                                 'title'=> "Tambah Best Practice",
                             ]) ?>
+                            <?= Html::a('<i class="fas fa-times"></i> ', ['deletefile', 'file' => $data->file], [    
+                                'class'=> 'text-danger float-right',
+                                'title'=> "Hapus Data",
+                                'data-confirm' => "Yakin menghapus file?",
+                                'data-method' => 'POST',
+                            ]) ?>
                         </td>
                     </tr>
                     <?php endforeach; ?>

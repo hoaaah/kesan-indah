@@ -36,6 +36,7 @@ class InfoUnsurController extends Controller
                 'class' => VerbFilter::className(),
                 'actions' => [
                     'delete' => ['POST'],
+                    'deletefile' => ['POST'],
                 ],
             ],
         ];
@@ -425,6 +426,14 @@ class InfoUnsurController extends Controller
             $return .= $data['0'].'<br>';
         }
         return $return;
+    }
+
+    public function actionDeletefile($file)
+    {
+        $model = BestPracticeFile::findOne(['file' => $file]);
+        $model->deleteImage();
+        $model->delete();
+        return $this->redirect(Yii::$app->request->referrer);
     }
 
     /**
