@@ -51,48 +51,7 @@ use yii\helpers\Url;
             ?>
         </div>
     </div>
-    <div class="row">
-        <div class="col-md-12">
-            <?php               
-                echo $form->field($user, 'unit_id')->widget(Select2::classname(), [
-                    'data' => ArrayHelper::map(\app\models\RefUnit::find()->select(['id', 'CONCAT(kd_unit_simda, \' \', nama_unit) AS nama_unit'])->orderBy('id ASC')->all(),'id','nama_unit'),
-                    'options' => ['id' => 'unit-id', 'placeholder' => $user->scenario === 'create' ? 'Pilih Unit ...' : 'Biarkan kosong jika tetap'],
-                    'pluginOptions' => [
-                        'allowClear' => true
-                    ],
-                ]);
-            ?>
-        </div>
-    </div>
-    <div class="row">
-        <div class="col-md-12">
-            <?php
-                echo $form->field($user, 'divisi_id')->widget(DepDrop::classname(), [
-                    'options'=>['id'=>'divisi-id'],
-                    'type' => DepDrop::TYPE_SELECT2,
-                    'pluginOptions'=>[
-                        'depends'=>['unit-id'],
-                        'placeholder'=>'Divisi...',
-                        'url'=>Url::to(['/site/list-divisi'])
-                    ]
-                ]);
-            ?>
-        </div>
-    </div>
-    <div class="row">
-        <div class="col-md-12">
-            <?php               
-                echo $form->field($user, 'sub_divisi_id')->widget(DepDrop::classname(), [
-                    'type' => DepDrop::TYPE_SELECT2,
-                    'pluginOptions'=>[
-                        'depends'=>['unit-id', 'divisi-id'],
-                        'placeholder'=>'Sub Divisi...',
-                        'url'=>Url::to(['/site/list-sub-divisi'])
-                    ]
-                ]);
-            ?>
-        </div>
-    </div>
+    
 
     <div class="row">
         <i class="pull-left">Bagian berikut diisi dengan status active dan role sebagai member, kecuali administrator</i>

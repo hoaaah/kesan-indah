@@ -47,10 +47,10 @@ $this->params['breadcrumbs'][] = $this->title;
                             </span>',
                 'format' => 'raw'
             ],
-            [
-                'attribute' => 'sub_divisi_id',
-                'value' => $model['refUnit']['nama_unit'] ."-".$model['refSubDivisi']['nama_sub_divisi']
-            ],
+            // [
+            //     'attribute' => 'sub_divisi_id',
+            //     'value' => $model['refUnit']['nama_unit'] ."-".$model['refSubDivisi']['nama_sub_divisi']
+            // ],
             //'auth_key',
             //'password_reset_token',
             //'account_activation_token',

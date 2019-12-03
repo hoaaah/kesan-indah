@@ -98,22 +98,7 @@ class UserIdentity extends ActiveRecord implements IdentityInterface
     {
         return $this->getAuthKey() === $authKey;
     }
-
-    public function getRefUnit()
-    {
-        return $this->hasOne(RefUnit::className(), ['id' => 'unit_id']);
-    } 
-
-    public function getRefDivisi()
-    {
-        return $this->hasOne(RefDivisi::className(), ['unit_id' => 'unit_id', 'divisi_id' => 'divisi_id']);
-    }
-
-    public function getRefSubDivisi()
-    {
-        return $this->hasOne(RefSubDivisi::className(), ['unit_id' => 'unit_id', 'divisi_id' => 'divisi_id', 'sub_divisi_id' => 'sub_divisi_id']);
-    } 
-
+    
     public function getRefUser()
     {
         return $this->hasOne(RefUser::className(), ['id' => 'kd_user']);

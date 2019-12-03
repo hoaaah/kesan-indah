@@ -1,0 +1,118 @@
+1 => Global Setting
+	01 => setting
+	02 => usermanagement
+	03 => grupakses
+	04 => Pengumuman
+	05 => 
+	06 => 
+	07 => 
+	08 => 
+	09 => 
+	10 => 
+	11 => 
+	12 => 
+2 => Parameter
+	01 => Sub Unsur
+	02 => Info Unsur
+	03 => Pengukuran Parameter
+	04 => Referensi Dokumen
+	05 => Unggah Best Practice
+	06 => 
+	07 => 
+	08 => 
+	09 => 
+	10 => 
+	11 => 
+	12 => 
+3 => Data View
+	01 => Informasi Sub Unsur
+	02 => Best Practice
+	03 => 
+	04 => 
+	05 => 
+	06 => 
+	07 => 
+	08 => 
+	09 => 
+	10 => 
+	11 => 
+	12 => 
+4 => Penatausahaan
+	01 => 
+	02 => 
+	03 => 
+	04 => 
+	05 => 
+	06 => 
+	07 => 
+	08 => 
+	09 => 
+	10 => 
+	11 => 
+	12 => 			
+5 => Pelaporan / Pembukuan
+	01 => 
+	02 => 
+	03 => 
+	04 => 
+	05 => 
+	06 => 
+	07 => 
+	08 => 
+	09 => 
+	10 => 
+	11 => 
+	12 => 
+6 => 
+	01 => 
+	02 => 
+	03 => 
+	04 => 
+	05 => 
+	06 => 
+	07 => 
+	08 => 
+	09 => 
+	10 => 
+	11 => 
+	12 =>
+
+
+Unit
+-- Divisi (jika induk kode 0)
+---- Sub Divisi (jika induk kode 0)
+
+Dinkes
+-- Gudang Sekretariat
+---- Bidang
+-- Gudang Obat
+-- Puskesmas
+---- Gudang Obat Puskesmas
+---- Gudang Makanan Puskesmas
+---- UGD
+---- Poli
+---- Apotik
+---- Pustu
+---- Poskesdes
+
+RS
+-- Gudang ATK Sekretariat
+---- Bidang
+-- Gudang Makanan
+---- Dapur
+-- Gudang Obat
+---- Poli
+---- UGD
+---- Apotik
+
+Dinas Pertanian
+-- Gudang Sekretariat
+---- Bidang
+---- Seksi UPT
+
+Mekanisme posting per bulan untuk ngisi saldo
+Untuk dijual/diserahkan semua menjadi dropdown pilihan
+-- digunakan sendiri
+-- dijual (Kecuali obat-obatan)
+-- dihibahkan
+-- Proses lanjutan

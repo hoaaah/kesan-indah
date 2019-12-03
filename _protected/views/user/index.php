@@ -55,8 +55,6 @@ $this->params['breadcrumbs'][] = $this->title;
                 }
             ],
             'refUser.name',
-            'refUnit.nama_unit',
-            'refSubDivisi.nama_sub_divisi',
             [
                 'class' => 'kartik\grid\ActionColumn',
                 'header' => "Aksi",
