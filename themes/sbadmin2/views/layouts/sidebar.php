@@ -73,5 +73,6 @@ HTML
                 ['label' => 'Suplemen 2', 'icon' => 'fas fa-file-pdf', 'url' => ['/uploads/SE-01-D3-2019-tentang-penjelasan-teknis-pengujian-substansi-spip.pdf'], 'visible' => true],
             ],
         ],
+        ['label' => 'Help', 'icon' => 'fas fa-file-pdf', 'url' => ['/uploads/kesan-indah-docs.pdf'], 'visible' => true],
     ]
 ]);
