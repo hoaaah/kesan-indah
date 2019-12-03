@@ -59,11 +59,11 @@ $this->params['breadcrumbs'][] = $this->title;
                     'attribute' => 'username',
                     'displayOnly' => true,
                 ],
-                [
-                    'attribute' => 'sub_divisi_id',
-                    'value' => $model->refSubDivisi ? $model->refUnit->nama_unit ." - ".$model->refDivisi->nama_divisi." - ".$model->refSubDivisi->nama_sub_divisi : '',
-                    'displayOnly' => true,
-                ],
+                // [
+                //     'attribute' => 'sub_divisi_id',
+                //     'value' => $model->refSubDivisi ? $model->refUnit->nama_unit ." - ".$model->refDivisi->nama_divisi." - ".$model->refSubDivisi->nama_sub_divisi : '',
+                //     'displayOnly' => true,
+                // ],
                 'email',
             ],
         ]);
